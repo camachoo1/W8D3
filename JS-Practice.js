@@ -3,12 +3,14 @@ class Clock {
     // 1. Create a Date object.
     const date = new Date();
     // 2. Store the hours, minutes, and seconds.
-    this.hours = date.getHours();
-    this.minutes = date.getMinutes();
-    this.seconds = date.getSeconds();
+    this.hours = `${date.getHours()}`.padStart(2, 0);
+    this.minutes = `${date.getMinutes()}`.padStart(2, 0);
+    this.seconds = `${date.getSeconds()}`.padStart(2, 0);
     // 3. Call printTime.
+    this.printTime();
 
     // 4. Schedule the tick at 1 second intervals.
+    this._tick;
   }
 
   printTime() {
