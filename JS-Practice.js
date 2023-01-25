@@ -8,9 +8,7 @@ class Clock {
     this.seconds = `${date.getSeconds()}`.padStart(2, 0);
     // 3. Call printTime.
     this.printTime();
-
     // 4. Schedule the tick at 1 second intervals.
-    this._tick;
   }
 
   printTime() {
